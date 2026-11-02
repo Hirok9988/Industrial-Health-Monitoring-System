@@ -1,0 +1,224 @@
+/* SECTION 6 - FAULT DETECTION */
+.fault-section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.fault-header {
+  max-width: 650px;
+  margin-bottom: 3rem;
+}
+
+.fault-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fault-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+}
+
+.fault-desc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+}
+
+/* COMPARISON GRID */
+.fault-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fault-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  padding: 1.5rem 1.5rem;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fc-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding-bottom: 1rem;
+}
+
+.fc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.fc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fc-row span {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.fc-row strong {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.fc-row strong.alert-text {
+  color: #111;
+  font-size: 1rem;
+}
+
+.fc-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  margin: 2rem 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fc-status {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.normal-status {
+  background-color: #FAFAFA;
+  color: var(--color-text-muted);
+}
+
+.warn-status {
+  background-color: #111;
+  color: #FFF;
+  border-color: #111;
+}
+
+/* SEQUENTIAL ANIMATION LOGIC */
+.fault-section.is-visible .fault-eyebrow,
+.fault-section.is-visible .fault-title,
+.fault-section.is-visible .fault-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 1. Cards fade in */
+.fault-section.is-visible .fault-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fault-section.is-visible .f-delay-1 { transition-delay: 0.3s; }
+.fault-section.is-visible .f-delay-2 { transition-delay: 0.4s; }
+.fault-section.is-visible .f-delay-3 { transition-delay: 0.5s; }
+
+/* 2. Normal values appear */
+.fault-section.is-visible .f-step-1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+/* 3. Abnormal values subtly change/appear */
+.fault-section.is-visible .f-step-2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.4s;
+}
+.fault-section.is-visible .f-step-3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.8s;
+}
+
+/* 4. Arrows appear */
+.fault-section.is-visible .f-step-4 {
+  opacity: 1;
+  transition-delay: 2.4s;
+}
+
+/* 5. Final diagnosis fades in */
+.fault-section.is-visible .f-step-5 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .fault-title {
+    font-size: 3.5rem;
+  }
+  .fault-comparison {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fault-section {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fault-title {
+    font-size: 2.5rem;
+  }
+}
