@@ -34,7 +34,7 @@ const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
 
 // Target FastAPI endpoint
 // NOTE: Use your computer's local IP address on the network (NOT 'localhost' or '127.0.0.1')
-const char* BACKEND_URL   = "http://10.239.175.182:8000/api/v1/sensor-data";
+const char* BACKEND_URL   = "http://10.181.76.182:8000/api/v1/sensor-data";
 const char* MACHINE_ID    = "MACHINE_01";
 
 // -----------------------------------------------------------------------------

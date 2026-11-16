@@ -45,26 +45,31 @@
 }
 
 .report-eyebrow {
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: 0.75rem;
 }
 
 .report-title {
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   color: var(--color-accent);
   margin-bottom: 0.75rem;
 }
 
 .report-subtitle {
+  font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-text-muted);
+  font-weight: 400;
 }
 
 .report-header-right {
@@ -91,18 +96,21 @@
 }
 
 .meta-label {
+  font-family: var(--font-display);
   font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   color: var(--color-text-muted);
 }
 
 .meta-value {
+  font-family: var(--font-mono);
   font-weight: 700;
   color: var(--color-accent);
 }
 
 .meta-badge-dark {
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
   background: #111111;
@@ -113,6 +121,7 @@
 }
 
 .meta-stream-badge {
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
   display: inline-flex;
@@ -171,8 +180,10 @@
 }
 
 .btn-resume-live {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
   padding: 0.4rem 0.9rem;
   background: #111111;
   color: #FFFFFF;
@@ -186,6 +197,7 @@
 }
 
 .meta-status-pill {
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
   display: inline-flex;
@@ -235,6 +247,7 @@
 }
 
 .report-tab-btn {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -264,6 +277,7 @@
 }
 
 .toggle-mode-btn {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.6rem 1rem;
@@ -279,8 +293,10 @@
 }
 
 .export-btn {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
   padding: 0.6rem 1.25rem;
   background: #FFFFFF;
   color: var(--color-accent);
@@ -308,6 +324,7 @@
 }
 
 .sim-label {
+  font-family: var(--font-display);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -321,6 +338,7 @@
 }
 
 .sim-btn {
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
   padding: 0.35rem 0.75rem;
@@ -400,12 +418,14 @@
 }
 
 .verdict-header h3 {
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .verdict-badge {
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -474,6 +494,7 @@
 }
 
 .col-title-wrap h4 {
+  font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -495,6 +516,7 @@
 }
 
 .col-badge {
+  font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -583,6 +605,7 @@
 }
 
 .item-value {
+  font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--color-accent);
@@ -617,6 +640,7 @@
 }
 
 .item-threshold-pill {
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
   display: inline-block;
@@ -663,6 +687,7 @@
 }
 
 .block-title {
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -741,8 +766,9 @@
 }
 
 .th-param-name {
+  font-family: var(--font-display);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--color-text-muted);
   text-transform: uppercase;
@@ -751,6 +777,7 @@
 }
 
 .th-reading {
+  font-family: var(--font-mono);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -764,6 +791,7 @@
 }
 
 .th-status-pill {
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -884,6 +912,7 @@
 }
 
 .th-spec-row strong {
+  font-family: var(--font-mono);
   color: var(--color-accent);
 }
 
@@ -941,6 +970,7 @@
 }
 
 .failure-category {
+  font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -950,6 +980,7 @@
 }
 
 .failure-title {
+  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-accent);
@@ -962,6 +993,7 @@
 }
 
 .risk-num {
+  font-family: var(--font-mono);
   font-size: 1.35rem;
   font-weight: 800;
   color: var(--color-accent);
@@ -1092,6 +1124,7 @@
 }
 
 .anom-category {
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1100,6 +1133,7 @@
 }
 
 .anom-title {
+  font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-accent);
@@ -1107,6 +1141,7 @@
 }
 
 .anom-badge {
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 700;
   padding: 0.2rem 0.5rem;
@@ -1148,6 +1183,7 @@
 }
 
 .anom-stat-val {
+  font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-accent);
@@ -1205,6 +1241,7 @@
 }
 
 .footer-cert-left strong {
+  font-family: var(--font-display);
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   color: var(--color-accent);
@@ -1226,6 +1263,7 @@
 }
 
 .jump-dashboard-btn {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;

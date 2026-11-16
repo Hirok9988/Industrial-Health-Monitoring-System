@@ -53,6 +53,19 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 
 # ----------------------------------------------------------------
+# Root Endpoint
+# ----------------------------------------------------------------
+@app.get("/", tags=["Root"])
+def root():
+    return {
+        "service": "Industrial Machine Monitoring API",
+        "status": "online",
+        "frontend_dashboard": "http://localhost:5173",
+        "api_documentation": "/docs",
+        "health_check": "/api/v1/health"
+    }
+
+# ----------------------------------------------------------------
 # V1 API Routes
 # ----------------------------------------------------------------
 app.include_router(health.router, prefix="/api/v1/health", tags=["Health"])

@@ -31,6 +31,7 @@ class MachineResponse(BaseModel):
     location: Optional[str] = None
     installation_date: Optional[str] = None
     status: Optional[str] = None
+    health_score: Optional[float] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
 

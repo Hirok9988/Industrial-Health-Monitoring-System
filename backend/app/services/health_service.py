@@ -195,7 +195,7 @@ class HealthService:
         machine_id: str,
         reading: Dict[str, float],
         window_size: int = 10,
-        update_interval_seconds: int = 60,
+        update_interval_seconds: int = 10,
         thresholds: MachineThresholds = MachineThresholds()
     ) -> Tuple[HealthAssessment, bool]:
         """

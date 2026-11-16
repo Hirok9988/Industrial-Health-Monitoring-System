@@ -17,6 +17,8 @@ class MachineReading(BaseModel):
     accel_x: Optional[float] = None
     accel_y: Optional[float] = None
     accel_z: Optional[float] = None
+    health_score: Optional[float] = None
+    status: Optional[str] = None
 
 
 class MachineReadingList(BaseModel):

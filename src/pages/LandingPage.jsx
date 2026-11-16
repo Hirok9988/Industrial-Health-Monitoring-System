@@ -332,9 +332,43 @@ export default function LandingPage({ onOpenDashboard }) {
             <button className="footer-link-btn" onClick={onOpenDashboard}>Live Dashboard</button>
           </div>
         </div>
+
+        {/* PROJECT TEAM MEMBERS */}
+        <div className="footer-team-section">
+          <div className="team-header-row">
+            <span className="team-eyebrow">PROJECT TEAM MEMBERS</span>
+            <span className="team-tag">CORE ENGINEERING &amp; SYSTEM ARCHITECTURE</span>
+          </div>
+          <div className="team-members-grid">
+            <div className="team-card">
+              <span className="team-pip"></span>
+              <span className="team-name">Anupal Baruah</span>
+            </div>
+            <div className="team-card">
+              <span className="team-pip"></span>
+              <span className="team-name">Ayush Paul</span>
+            </div>
+            <div className="team-card">
+              <span className="team-pip"></span>
+              <span className="team-name">Dimpal Ch Dihingia</span>
+            </div>
+            <div className="team-card">
+              <span className="team-pip"></span>
+              <span className="team-name">Hirok Jyoti Bordoloi</span>
+            </div>
+            <div className="team-card">
+              <span className="team-pip"></span>
+              <span className="team-name">Nabajit Nath</span>
+            </div>
+          </div>
+        </div>
+
         <div className="footer-bottom">
           <p className="footer-tech-line">
-            IoT-Based Multi-Sensor Industrial Machine Condition Monitoring & Early Fault Detection System
+            IoT-Based Multi-Sensor Industrial Machine Condition Monitoring &amp; Early Fault Detection System
+          </p>
+          <p className="footer-team-inline">
+            Project Contributors: <strong>Anupal Baruah</strong>, <strong>Ayush Paul</strong>, <strong>Dimpal Ch Dihingia</strong>, <strong>Hirok Jyoti Bordoloi</strong>, <strong>Nabajit Nath</strong>
           </p>
         </div>
       </footer>
