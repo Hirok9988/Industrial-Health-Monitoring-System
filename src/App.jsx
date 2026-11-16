@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LandingPage from './pages/LandingPage';
 import DashboardPage from './pages/DashboardPage';
+import InstallPwaPrompt from './components/InstallPwaPrompt';
 
 function App() {
   const [currentRoute, setCurrentRoute] = useState(() => {
@@ -36,6 +37,7 @@ function App() {
       ) : (
         <LandingPage onOpenDashboard={navigateToDashboard} />
       )}
+      <InstallPwaPrompt />
     </div>
   );
 }
