@@ -30,8 +30,9 @@ app = FastAPI(
 # ----------------------------------------------------------------
 # CORS Configuration
 # ----------------------------------------------------------------
-# Parse origins from env var string, separated by commas
-origins = [origin.strip() for origin in settings.ALLOWED_ORIGINS.split(",") if origin.strip()]
+# Parse origins from env var string, separated by commas (strictly allows specified domains)
+origins = settings.parsed_allowed_origins
+logger.info(f"CORS allowed origins configured: {origins}")
 
 app.add_middleware(
     CORSMiddleware,
