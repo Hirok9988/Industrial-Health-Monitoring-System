@@ -69,7 +69,7 @@ Unexpected mechanical failures, bearing degradation, rotor lockups, and thermal 
                      |    1-CHANNEL SAFETY RELAY     |             | Wi-Fi HTTP POST    |
                      |  - Cuts DC Motor Supply       |             | JSON Payload       |
                      |  - Active LOW Trip Breaker    |             +--------------------+
-                     |  - Buzzer / Red LED Alarms    |                       |
+                     |  - Emergency Power Cut-off    |                       |
                      +-------------------------------+                       v
                                                                    +--------------------+
                                                                    |  FASTAPI BACKEND   |
@@ -106,7 +106,6 @@ Unexpected mechanical failures, bearing degradation, rotor lockups, and thermal 
 | **Ambient Environment**| **DHT22 (or DHT11)** | Measures ambient air temperature & relative humidity to detect heat-trapping | Single-bus Digital |
 | **Electrical Load** | **ACS712-05B Current Sensor** | Measures motor real-time current draw to detect electrical overload or stalls | Analog Output ($\text{ADC1}$) |
 | **Safety Circuit Trip**| **1-Channel 5V Relay Module** | Electromechanical breaker that opens and cuts motor power upon critical state | Digital GPIO (Active LOW) |
-| **Status Indicators** | **LEDs (Red, Yellow, Green) & Buzzer** | Local visual and acoustic notification for normal, warning, and alarm states | Digital GPIO Output |
 | **Power Isolation** | **Dual Independent Power Supplies** | Separate battery rails for ESP32 logic vs DC motor to eliminate inductive kickback | Isolated Direct DC Rails |
 
 ---
@@ -122,10 +121,6 @@ Unexpected mechanical failures, bearing degradation, rotor lockups, and thermal 
 | **DHT22 (DATA)** | **GPIO 4** | $3.3\text{V}$ | Digital pin for ambient air temperature & relative humidity |
 | **ACS712 (OUT)** | **GPIO 34** | $3.3\text{V}$ max | Uses $\text{ADC1}$ (safe while Wi-Fi is active; avoids $\text{ADC2}$ conflict) |
 | **Relay (IN)** | **GPIO 26** | $3.3\text{V} / 5\text{V}$ | Active LOW: `LOW` = Motor Circuit Closed, `HIGH` = Motor Tripped |
-| **Green LED** | **GPIO 13** | $3.3\text{V}$ | Normal State |
-| **Yellow LED** | **GPIO 12** | $3.3\text{V}$ | Warning State |
-| **Red LED** | **GPIO 14** | $3.3\text{V}$ | Critical State |
-| **Buzzer (+)** | **GPIO 27** | $3.3\text{V}$ | Warning chirp / Critical continuous alarm |
 
 ---
 
